@@ -5,6 +5,7 @@ import axios from "axios";
 import Header from "../Header/Header";
 import Footer from "../Footer/Footer";
 import GalleryList from "../GalleryList/GalleryList";
+import GalleryForm from "../GalleryForm/GalleryForm";
 
 function App() {
   //gallery
@@ -23,7 +24,22 @@ function App() {
         setGalleryList(response.data);
       })
       .catch((error) => {
-        console.log("error in GET App", error);
+        alert("Error Getting");
+      });
+  };
+
+  //POST request
+  const addGallery = (path, description) => {
+    axios
+      .post("/gallery", {
+        path: path,
+        description: description,
+      })
+      .then((response) => {
+        getGallery();
+      })
+      .catch((error) => {
+        alert("Error Adding");
       });
   };
 
@@ -45,6 +61,7 @@ function App() {
   return (
     <div className="App">
       <Header />
+      <GalleryForm addGallery={addGallery} />
       <GalleryList galleryList={galleryList} updateGallery={updateGallery} />
       <Footer />
     </div>
