@@ -13,7 +13,7 @@ function GalleryItem({ galleryList, updateGallery }) {
           <img onClick={()=>setClicked(true)} alt={gallery.description}/>}
         </div>
         <div>
-          <button onClick={()=>updateGallery(gallery.id)}>Like</button>
+          <button onClick={()=>updateGallery(gallery.id,gallery.likes)}>Like</button>
           <p> {gallery.likes} People liked this.</p>
         </div>
       </div>
