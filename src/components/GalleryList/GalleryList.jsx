@@ -1,10 +1,10 @@
 import GalleryItem from "../GalleryItem/GalleryItem";
 
-function GalleryList({ galleryList }) {
+function GalleryList({ galleryList, updateGallery }) {
   return (
     <>
       <div className="gallery-container">
-        <GalleryItem galleryList={galleryList} />
+        <GalleryItem galleryList={galleryList} updateGallery={updateGallery}/>
       </div>
     </>
   );

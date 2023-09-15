@@ -27,11 +27,23 @@ function App() {
       });
   };
 
+  //PUT request
+  function updateGallery(idToUpdate) {
+    axios
+      .put(`/gallery/like/${idToUpdate}`, idToUpdate)
+      .then((response) => {
+        getGallery();
+      })
+      .catch((error) => {
+        alert("Error Updating");
+      });
+  }
+
   return (
     <div className="App">
       <Header />
-      <GalleryList galleryList={galleryList}/>
-      <Footer/>
+      <GalleryList galleryList={galleryList} updateGallery={updateGallery}/>
+      <Footer />
     </div>
   );
 }

@@ -1,13 +1,19 @@
-function GalleryItem({ galleryList }) {
+import  { useState } from 'react';
+
+function GalleryItem({ galleryList, updateGallery }) {
+    const [clicked, setClicked] = useState(true);
+   
   return (
     <>
     {galleryList.map((gallery) => (
-      <div className="item-container">
+      <div className="item-container" key={gallery.id}>
         <div>
-          <img src={gallery.path} />
+        {clicked ?
+          <img onClick={()=>setClicked(false)} src={gallery.path} />:
+          <img onClick={()=>setClicked(true)} alt={gallery.description}/>}
         </div>
         <div>
-          <button>Like</button>
+          <button onClick={()=>updateGallery(gallery.id)}>Like</button>
           <p> {gallery.likes} People liked this.</p>
         </div>
       </div>
