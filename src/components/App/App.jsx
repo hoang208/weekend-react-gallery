@@ -28,9 +28,12 @@ function App() {
   };
 
   //PUT request
-  function updateGallery(idToUpdate) {
+  function updateGallery(idToUpdate, likes) {
     axios
-      .put(`/gallery/like/${idToUpdate}`, idToUpdate)
+      .put(`/gallery/like/${idToUpdate}`, {
+        idToUpdate: idToUpdate,
+        likes: likes,
+      })
       .then((response) => {
         getGallery();
       })
@@ -42,7 +45,7 @@ function App() {
   return (
     <div className="App">
       <Header />
-      <GalleryList galleryList={galleryList} updateGallery={updateGallery}/>
+      <GalleryList galleryList={galleryList} updateGallery={updateGallery} />
       <Footer />
     </div>
   );
