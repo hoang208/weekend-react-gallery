@@ -30,8 +30,7 @@ function App() {
   return (
     <div className="App">
       <Header />
-      <p>Gallery goes here</p>
-      <img src="images/goat_small.jpg" />
+      <GalleryList galleryList={galleryList}/>
       <Footer/>
     </div>
   );
