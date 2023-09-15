@@ -2,11 +2,13 @@
   text-align: center;
 }
 
-.App-header {
+.App-header, .App-footer {
   background-color: #222;
-  padding: 1em;
   color: white;
-  margin-bottom: 1em;
+  padding: 2rem 1rem;
+  max-width: 800px;
+  width: 100%;
+  margin: 0 auto;
 }
 
 .App-title {
