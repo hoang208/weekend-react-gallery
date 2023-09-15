@@ -1,23 +1,21 @@
 import  { useState } from 'react';
 
-function GalleryItem({ galleryList, updateGallery }) {
+function GalleryItem(props) {
     const [clicked, setClicked] = useState(true);
    
   return (
     <>
-    {galleryList.map((gallery) => (
-      <div className="item-container" key={gallery.id}>
+      <div className="item-container">
         <div>
         {clicked ?
-          <img onClick={()=>setClicked(false)} src={gallery.path} />:
-          <img onClick={()=>setClicked(true)} alt={gallery.description}/>}
+          <img onClick={()=>setClicked(false)} src={props.path} />:
+          <img onClick={()=>setClicked(true)} alt={props.description}/>}
         </div>
-        <div>
-          <button onClick={()=>updateGallery(gallery.id,gallery.likes)}>Like</button>
-          <p> {gallery.likes} People liked this.</p>
+        <div className='like-container'>
+          <button onClick={()=>props.updateGallery(props.id,props.likes)}>Like</button>
+          <p> {props.likes} People liked this.</p>
         </div>
       </div>
-    ))}
     </>
   );
 }

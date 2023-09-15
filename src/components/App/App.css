@@ -53,3 +53,8 @@ section{
   width: 100%;
   margin: 0 auto;
 }
+
+button {
+  cursor: pointer;
+  margin-top: .5rem;
+}
