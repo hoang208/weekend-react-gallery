@@ -58,11 +58,23 @@ function App() {
       });
   }
 
+  //DELETE request
+  const deleteGallery = (idToDelete) => {
+    axios
+      .delete(`/gallery/${idToDelete}`)
+      .then((response) => {
+        getGallery();
+      })
+      .catch((error) => {
+        alert("Error Deleting");
+      });
+  };
+
   return (
     <div className="App">
       <Header />
       <GalleryForm addGallery={addGallery} />
-      <GalleryList galleryList={galleryList} updateGallery={updateGallery} />
+      <GalleryList galleryList={galleryList} updateGallery={updateGallery} deleteGallery={deleteGallery}/>
       <Footer />
     </div>
   );

@@ -13,6 +13,7 @@ function GalleryItem(props) {
         </div>
         <div className='like-container'>
           <button onClick={()=>props.updateGallery(props.id,props.likes)}>Like</button>
+          <button onClick={()=>props.deleteGallery(props.id)}>Delete</button>
           <p> {props.likes} People liked this.</p>
         </div>
       </div>

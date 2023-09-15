@@ -1,6 +1,6 @@
 import GalleryItem from "../GalleryItem/GalleryItem";
 
-function GalleryList({ galleryList, updateGallery }) {
+function GalleryList({ galleryList, updateGallery, deleteGallery }) {
   return (
     <>
       <section className="gallery-container">
@@ -12,6 +12,7 @@ function GalleryList({ galleryList, updateGallery }) {
         description= {gallery.description}
         likes={gallery.likes}
         updateGallery={updateGallery}
+        deleteGallery={deleteGallery}
         />
         ))}
       </section>
