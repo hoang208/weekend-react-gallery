@@ -8,7 +8,7 @@ function GalleryItem(props) {
       <div className="item-container">
         <div>
         {clicked ?
-          <img onClick={()=>setClicked(false)} src={props.path} />:
+          <img onClick={()=>setClicked(false)} src= {props.path} />:
           <img onClick={()=>setClicked(true)} alt={props.description}/>}
         </div>
         <div className='like-container'>
