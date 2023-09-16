@@ -8,6 +8,7 @@ import Typography from '@mui/material/Typography';
 import DeleteIcon from "@mui/icons-material/Delete";
 import ThumbUpIcon from "@mui/icons-material/ThumbUp";
 import Grid from '@mui/material/Unstable_Grid2';
+import Tooltip from '@mui/material/Tooltip';
 
 function GalleryItem(props) {
   const [clicked, setClicked] = useState(true);
@@ -16,6 +17,7 @@ function GalleryItem(props) {
     <Grid xs={6}>
       <Card sx={{ maxWidth: 345 }}>
         {clicked ? (
+            <Tooltip title="Click to see description" placement="right">
             <CardMedia
             component="img"
             alt={props.description} 
@@ -23,13 +25,16 @@ function GalleryItem(props) {
             image={props.path}
             onClick={() => setClicked(false)}
           />
+          </Tooltip>
           ) : (
+            <Tooltip title="Click to see description" placement="right">
             <CardMedia
             component="img"
             alt={props.description} 
             height="200"
             onClick={() => setClicked(true)}
           />
+           </Tooltip>
           )}
       <CardContent>
         <Typography variant="body1" color="text.secondary">
