@@ -1,11 +1,19 @@
+import Typography from "@mui/material/Typography";
+import AppBar from "@mui/material/AppBar";
+import Box from "@mui/material/Box";
+
 function Header() {
-    return (
-      <>
-        <header className="App-header">
-          <h1 className="App-title">Gallery of My Life</h1>
+  return (
+    <Box sx={{ flexGrow: 1 }}>
+      <AppBar position="static" style={{ background: '#E0C1B3' }}>
+        <header>
+          <Typography variant="h2" gutterBottom>
+            Gallery of Iconic Moments
+          </Typography>
         </header>
-      </>
-    );
-  }
-  
-  export default Header;
+      </AppBar>
+    </Box>
+  );
+}
+
+export default Header;
