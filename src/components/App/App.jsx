@@ -73,7 +73,11 @@ function App() {
     <div className="App">
       <Header />
       <GalleryForm addGallery={addGallery} />
-      <GalleryList galleryList={galleryList} updateGallery={updateGallery} deleteGallery={deleteGallery}/>
+      <GalleryList
+        galleryList={galleryList}
+        updateGallery={updateGallery}
+        deleteGallery={deleteGallery}
+      />
     </div>
   );
 }
