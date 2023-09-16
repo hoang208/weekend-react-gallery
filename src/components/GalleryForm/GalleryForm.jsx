@@ -17,7 +17,7 @@ function GalleryForm({ addGallery }) {
   };
 
   return (
-    <Container maxWidth="sm" className="form-container" >
+    <Container maxWidth="sm" className="form-container">
       <Box
         sx={{
           "& .MuiTextField-root": { m: 1, width: "25ch" },

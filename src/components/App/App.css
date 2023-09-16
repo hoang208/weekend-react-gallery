@@ -2,7 +2,6 @@
   text-align: center;
 }
 
-
 img {
   background-color: #222;
   color: white;
@@ -23,6 +22,6 @@ input {
   background-color: white;
 }
 
-.form-container{
+.form-container {
   margin: 2rem auto;
 }
