@@ -1,6 +1,11 @@
 import { useState } from "react";
+import Button from "@mui/material/Button";
+import TextField from "@mui/material/TextField";
+import Container from "@mui/material/Container";
+import Box from "@mui/material/Box";
+import Grid from "@mui/material/Unstable_Grid2";
 
-function GalleryForm({addGallery}) {
+function GalleryForm({ addGallery }) {
   const [path, setPath] = useState("");
   const [description, setDescription] = useState("");
 
@@ -12,19 +17,50 @@ function GalleryForm({addGallery}) {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
-      <label>Image Link:</label>
-      <input
-        onChange={(event) => setPath(event.target.value)}
-        value={path}
-      />
-      <label>Description:</label>
-      <input
-        onChange={(event) => setDescription(event.target.value)}
-        value={description}
-      />
-      <button type="submit">Add</button>
-    </form>
+    <Container maxWidth="sm" className="form-container" >
+      <Box
+        sx={{
+          "& .MuiTextField-root": { m: 1, width: "25ch" },
+        }}
+      >
+        <form onSubmit={handleSubmit}>
+          <Grid container>
+            <Grid item>
+              <TextField
+                id="outlined-required"
+                label="Image Link"
+                variant="outlined"
+                onChange={(event) => setPath(event.target.value)}
+                value={path}
+                required
+              />
+            </Grid>
+            <Grid item>
+              <TextField
+                id="outlined-required"
+                label="Description"
+                variant="outlined"
+                onChange={(event) => setDescription(event.target.value)}
+                value={description}
+                required
+              />
+            </Grid>
+
+            <Grid item alignItems="stretch" style={{ display: "flex" }}>
+              <Button
+                type="submit"
+                variant="text"
+                size="large"
+                disableElevation
+                color="success"
+              >
+                Add
+              </Button>
+            </Grid>
+          </Grid>
+        </form>
+      </Box>
+    </Container>
   );
 }
 

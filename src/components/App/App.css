@@ -2,18 +2,6 @@
   text-align: center;
 }
 
-.App-header, .App-footer {
-  background-color: #222;
-  color: white;
-  padding: 2rem 1rem;
-  max-width: 800px;
-  width: 100%;
-  margin: 0 auto;
-}
-
-.App-title {
-  font-size: 1.5em;
-}
 
 img {
   background-color: #222;
@@ -21,40 +9,20 @@ img {
   object-fit: cover;
   width: 200px;
   height: 200px;
-  display: flex;
-  overflow: hidden;
-  text-align: center;
-  margin: auto;
   line-height: 50px;
   font-size: 1rem;
   vertical-align: middle;
 }
 
-.item-container {
-  margin-top: 0 2rem;
-}
-
-.gallery-container {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  flex-wrap: wrap;
-  flex-direction: row;
-  gap: 1rem;
-}
-
-.gallery-container>* {
-  flex: 0 0 33.3333%;
-}
-
-section{
-  padding: 2rem 1rem;
-  max-width: 800px;
-  width: 100%;
-  margin: 0 auto;
-}
-
 button {
   cursor: pointer;
-  margin-top: .5rem;
+}
+
+input {
+  margin: auto;
+  background-color: white;
+}
+
+.form-container{
+  margin: 2rem auto;
 }

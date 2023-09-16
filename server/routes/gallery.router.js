@@ -6,7 +6,7 @@ const pool = require("../modules/pool.js");
 
 // GET Route
 router.get("/", (req, res) => {
-  const sqlText = `SELECT * FROM gallery`;
+  const sqlText = `SELECT * FROM gallery ORDER BY "id" ASC`;
   console.log("Get text", sqlText);
   pool
     .query(sqlText)
