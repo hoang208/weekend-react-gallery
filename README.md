@@ -38,7 +38,7 @@ In order to tackle all the requirements for this project, I created a map of wha
 5. Navigate to http://localhost3000/
 
 ## Usage
-This web application is meant to assist the user by creating a to-do list:
+This web application is meant to create an interactive gallery where users can add their own images:
  1. Using the provided input field, enter the link of the image to be added and also a description.
  2. Using the add button will add image to the gallery.
  3. By clicking on images, users can see the image description.
